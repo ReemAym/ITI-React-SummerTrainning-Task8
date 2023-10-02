@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+
+    <style>
+        body{
+            background-color: rgb(161, 210, 255);
+        }
+        
+        form{
+            position: absolute;
+            top: 30%;
+            transform: translateY(-50%);
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 50px;
+            border: 2px solid rgb(13, 101, 184);
+            line-height: 2;
+            box-shadow: 0px 0px 10px rgb(34, 133, 226);
+            background-color:rgb(134, 197, 255);
+        }
+        input{
+            border-radius: 2px;
+            background-color: rgba(69, 162, 249, 0.772);
+        }
+
+        input:hover{
+            background-color: rgb(151, 205, 255);
+        }
+    </style>
+</head>
+<body>
+
+    <form action="right click.html">
+        <label>Name</label>
+        <input type="text" placeholder="enter your name" required><br><br>
+
+        <label>Email</label>
+        <input type="email" placeholder="enter yor email" required><br><br>
+
+        <label>Password</label>
+        <input type="password" placeholder="enter your password" required><br><br>
+        <input type="submit" value="Submit" onclick="confirmation()">
+        <input type="reset" value="reset">
+    </form>
+    
+    <script>
+        function confirmation(){
+            var c=confirm("you entered data successfully,Do you want to continue?");
+            if(!c){
+               event.preventDefault();
+               console.log("user cancel");
+            }
+        }
+    </script>
+</body>
+</html>

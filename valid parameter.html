@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>valid parameter</title>
+</head>
+
+<body>
+
+    <script>
+        function validPrmt(a,b) {
+            var E=new Error("Two parameter required");
+            if (arguments.length !== 2) {
+                throw E;
+            }
+
+            return (a+b);
+        }
+
+        console.log(validPrmt(2,4,6))
+    </script>
+</body>
+
+</html>
